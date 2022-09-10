@@ -2,11 +2,11 @@ puts "🌱 Seeding spices..."
 
 # Seed your database here
 #user data
-user1 = User.create(name: "John Smith", email: "john@smith.comments.com")
-user2 = User.create(name: "Jake Daniel", email: "jake@daniel.com")
-user3 = User.create(name: "Preety James", email: "preety@james.com")
-user4 = User.create(name: "Brian Scott", email: "brian@scott.com")
-user5 = User.create(name: "Essy Keru", email: "essy@keteru.com")
+user1 = User.create(name: "John Smith")
+user2 = User.create(name: "Jake Daniel")
+user3 = User.create(name: "Preety James")
+user4 = User.create(name: "Brian Scott")
+user5 = User.create(name: "Essy Keru")
 
 #poem data
 poem1 = Poem.create(title: "One Wish", description: "She hid behind her flawless façade,
