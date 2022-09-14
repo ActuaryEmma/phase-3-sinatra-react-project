@@ -18,10 +18,15 @@ delete "/poem/comments/:id" do
   comment = Comment.find(params[:id])
   comment.destroy
   comment.to_json
-  # (only: [:id, :comment ],
-  #   include: {user: {only: [:id, :name]}}
-  # )
 
+
+end
+
+#delete a poem author
+delete "/poemauthor/:id" do
+  author = PoemAuthor.find(params[:id])
+  author.destroy
+  author.to_json
 end
 
 
@@ -51,20 +56,16 @@ end
 
 
 #get list of poets
-post "/poemauthor" do
-  author = PoemAuthor.create(
-    major_achievements: params[:major_achievements]
+# post "/poemauthor" do
+#   author = PoemAuthor.create(
+#     major_achievements: params[:major_achievements]
    
-  )
+#   )
   
-  author.to_json
-end
+#   author.to_json
+# end
 
-delete "/poemauthor/:id" do
-  author = PoemAuthor.find(params[:id])
-  author.destroy
-  author.to_json
-end
+
 
 #update a comment
 patch "/comments/:id" do
