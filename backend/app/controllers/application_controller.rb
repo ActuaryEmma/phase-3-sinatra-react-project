@@ -55,18 +55,6 @@ get "/poemauthor" do
 end
 
 
-#get list of poets
-# post "/poemauthor" do
-#   author = PoemAuthor.create(
-#     major_achievements: params[:major_achievements]
-   
-#   )
-  
-#   author.to_json
-# end
-
-
-
 #update a comment
 patch "/comments/:id" do
 comments = Comment.find(params[:id])

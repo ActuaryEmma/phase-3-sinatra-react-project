@@ -1,14 +1,14 @@
 
-describe ApplicationController do
+describe PoemAuthor do
 
     let(:author) {PoemAuthor.first}
 
     before do
         PoemAuthor.create(name: "William Carlos Williams",publication: "The Red Wheelbarrow", major_achievements: "Published 10 books at the age of 25 years" )
     end
-
+ #get
     describe 'GET /poemauthor' do
-        it 'returns an array of JSON objects for all messages in the database' do
+        it 'returns an array of JSON objects for all poem authors in the database' do
         get '/poemauthor'
     
         expect(last_response.body).to include_json([
@@ -17,13 +17,13 @@ describe ApplicationController do
         ])
         end
     end
-
+#patch
     describe 'PATCH/poemauthor/:id' do
         let(:params) do
             {publication: "Money"}
         end
 
-        it "updatesthe publication of the poemauthor in the database" do
+        it "updates the publication of the poemauthor in the database" do
             expect do 
                 patch "/poemauthor/#{author.id}", params
 
